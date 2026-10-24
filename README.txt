@@ -1,12 +1,11 @@
-Vorrats-App v1.2 – Apple Erinnerungen Test
+Vorrats-App v1.3 – x-callback-url Test auf iPadOS
 
-1. Dateien auf einem HTTPS-Webserver oder zum Testen auf einem PC mit Python-Webserver bereitstellen.
-2. iPad: URL des Servers in Safari öffnen. localhost auf dem PC ist NICHT localhost auf dem iPad!
-3. iPad: In der App „Apple Erinnerungen aktivieren“ einschalten.
-4. Kurzbefehl „Vorrat Einkaufsliste“ muss auf dem iPad vorhanden und eingerichtet sein.
-5. Bei einem Wechsel von oberhalb des Mindestbestands auf den Mindestbestand wird der Kurzbefehl gestartet.
-6. Bei erneuter Absenkung ohne vorheriges Überschreiten erfolgt kein erneuter Aufruf.
-7. iPadOS kann eine Bestätigung verlangen oder zu Kurzbefehle wechseln. Vollautomatische Ausführung ist nicht garantiert.
-8. Die Daten liegen lokal im Browserprofil je Gerät/Origin. Sie werden NICHT zwischen Windows und iPad synchronisiert. Für den Umzug JSON-Sicherung exportieren und auf dem iPad importieren.
-9. Wenn ein vorhandener Eintrag bereits auf der Einkaufsliste steht, verhindert der eingerichtete Kurzbefehl Duplikate.
-10. Bei Updates mit derselben URL bleibt die lokale Datenbank normalerweise erhalten. Vorher Sicherung exportieren.
+Änderung gegenüber v1.2: Beim Erreichen des Mindestbestands wird shortcuts://x-callback-url/run-shortcut aufgerufen. x-success ist die HTTPS-Startadresse der aktuellen App (relativ zum Standort, kompatibel mit GitHub Pages).
+
+WICHTIG: Im Kurzbefehl „Vorrat Einkaufsliste“ am Ende alle manuellen Rückkehraktionen (App öffnen → Safari, URL öffnen, webapp://) entfernen. Duplikatprüfung und Erinnerungsaktion unverändert lassen.
+
+Die Rückkehr zur installierten Home-Bildschirm-App ist NICHT garantiert: iPadOS kann stattdessen Safari öffnen. x-callback-url ist offiziell für den Rückruf dokumentiert, nicht für die Auswahl einer bestimmten PWA.
+
+GitHub Pages: Dateien aus dem Unterordner vorrats-app direkt in das Repository-Hauptverzeichnis hochladen (vorhandene Dateien überschreiben). Die Datenbank und Bestände bleiben bei gleicher Origin normalerweise erhalten. Vor Update eine JSON-Sicherung erstellen. Service Worker Cache ist v1.3, ggf. App vollständig schließen und neu öffnen.
+
+Offline funktioniert die Bestandsverwaltung nach erfolgreicher Installation; Erinnerungen-Synchronisation zwischen Geräten erfordert Internet.
