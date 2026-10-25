@@ -21,3 +21,5 @@ HINWEISE
 - Die Daten liegen weiterhin nur auf dem jeweiligen Gerät, nicht in GitHub.
 - Eine reine Namensänderung löst keine Apple-Erinnerung aus.
 - Die Rückgängig-Funktion bezieht sich auf die letzte Mengenänderung; nach anderen Bearbeitungen wird sie zurückgesetzt.
+
+Version 1.6.1: Reiterbeschriftungen über Bearbeiten → Reiter benennen anpassen. Überschriften KÜCHE / Unsere Vorräte entfernt.
