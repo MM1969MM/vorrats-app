@@ -15,3 +15,5 @@ Die Rückkehr zur installierten Home-Bildschirm-App ist NICHT garantiert: iPadOS
 GitHub Pages: Dateien aus dem Unterordner vorrats-app direkt in das Repository-Hauptverzeichnis hochladen (vorhandene Dateien überschreiben). Die Datenbank und Bestände bleiben bei gleicher Origin normalerweise erhalten. Vor Update eine JSON-Sicherung erstellen. Service Worker Cache ist v1.3, ggf. App vollständig schließen und neu öffnen.
 
 Offline funktioniert die Bestandsverwaltung nach erfolgreicher Installation; Erinnerungen-Synchronisation zwischen Geräten erfordert Internet.
+
+Version 1.5: Neues App-Symbol und Apple Touch Icon; Service-Worker-Cache v1.5. App-Logik unverändert.
