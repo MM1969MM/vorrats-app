@@ -1,19 +1,23 @@
-Vorrats-App Version 1.4
+VORRAT – VERSION 1.6
 
-Änderung: x-callback-url entfernt. Direkter Start von „Vorrat Einkaufsliste“ wie in Version 1.2.
-Für automatische Rückkehr am Ende des Kurzbefehls die Aktion „Shortcuts Browser“ mit URL https://mm1969mm.github.io/vorrats-app/ verwenden.
-Hinweis: Shortcuts Browser, Safari und die Home-Bildschirm-Web-App speichern Bestände getrennt. Bei Bedarf JSON-Sicherung exportieren/importieren.
+Installation: Inhalt des Ordners vorrats-app in das bestehende GitHub-Pages-Repository hochladen.
+Die vorhandene App-Installation auf dem iPad muss für dieses Update nicht entfernt werden.
 
-Vorrats-App v1.3 – x-callback-url Test auf iPadOS
+NEU
+- Tabs: Regelmäßiger Vorrat und Einmaliger Vorrat.
+- Regelmäßiger Vorrat: Mindestbestand und Apple-Kurzbefehl wie bisher.
+- Einmaliger Vorrat: keine Erinnerungen; beim Reduzieren auf 0 wird der Artikel entfernt. Über Rückgängig kann er wiederhergestellt werden.
+- Im Bearbeiten-Modus: ✎ öffnet die nachträgliche Bearbeitung von Name, Bestand, Mindestbestand und Vorratsart.
+- Beim Anlegen wird die Vorratsart des geöffneten Tabs vorbelegt.
+- Bestehende Artikel aus v1.5.1 werden automatisch als regelmäßiger Vorrat behandelt.
+- JSON-Sicherung Version 2; Import akzeptiert auch Sicherungen aus Version 1.
 
-Änderung gegenüber v1.2: Beim Erreichen des Mindestbestands wird shortcuts://x-callback-url/run-shortcut aufgerufen. x-success ist die HTTPS-Startadresse der aktuellen App (relativ zum Standort, kompatibel mit GitHub Pages).
+UNVERÄNDERT
+- Vorratsglas-Icon und PWA-Vollbildmodus.
+- Apple-Kurzbefehl 'Vorrat Einkaufsliste' und Rücksprung über webapp:// (im Kurzbefehl).
+- Offline-Funktion und lokale IndexedDB-Datenhaltung.
 
-WICHTIG: Im Kurzbefehl „Vorrat Einkaufsliste“ am Ende alle manuellen Rückkehraktionen (App öffnen → Safari, URL öffnen, webapp://) entfernen. Duplikatprüfung und Erinnerungsaktion unverändert lassen.
-
-Die Rückkehr zur installierten Home-Bildschirm-App ist NICHT garantiert: iPadOS kann stattdessen Safari öffnen. x-callback-url ist offiziell für den Rückruf dokumentiert, nicht für die Auswahl einer bestimmten PWA.
-
-GitHub Pages: Dateien aus dem Unterordner vorrats-app direkt in das Repository-Hauptverzeichnis hochladen (vorhandene Dateien überschreiben). Die Datenbank und Bestände bleiben bei gleicher Origin normalerweise erhalten. Vor Update eine JSON-Sicherung erstellen. Service Worker Cache ist v1.3, ggf. App vollständig schließen und neu öffnen.
-
-Offline funktioniert die Bestandsverwaltung nach erfolgreicher Installation; Erinnerungen-Synchronisation zwischen Geräten erfordert Internet.
-
-Version 1.5: Neues App-Symbol und Apple Touch Icon; Service-Worker-Cache v1.5. App-Logik unverändert.
+HINWEISE
+- Die Daten liegen weiterhin nur auf dem jeweiligen Gerät, nicht in GitHub.
+- Eine reine Namensänderung löst keine Apple-Erinnerung aus.
+- Die Rückgängig-Funktion bezieht sich auf die letzte Mengenänderung; nach anderen Bearbeitungen wird sie zurückgesetzt.
