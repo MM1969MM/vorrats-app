@@ -1,3 +1,9 @@
+Vorrats-App Version 1.4
+
+Änderung: x-callback-url entfernt. Direkter Start von „Vorrat Einkaufsliste“ wie in Version 1.2.
+Für automatische Rückkehr am Ende des Kurzbefehls die Aktion „Shortcuts Browser“ mit URL https://mm1969mm.github.io/vorrats-app/ verwenden.
+Hinweis: Shortcuts Browser, Safari und die Home-Bildschirm-Web-App speichern Bestände getrennt. Bei Bedarf JSON-Sicherung exportieren/importieren.
+
 Vorrats-App v1.3 – x-callback-url Test auf iPadOS
 
 Änderung gegenüber v1.2: Beim Erreichen des Mindestbestands wird shortcuts://x-callback-url/run-shortcut aufgerufen. x-success ist die HTTPS-Startadresse der aktuellen App (relativ zum Standort, kompatibel mit GitHub Pages).
